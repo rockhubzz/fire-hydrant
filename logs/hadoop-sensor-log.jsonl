@@ -1,0 +1,4 @@
+{"timestamp":"2026-04-12T12:29:46.203Z","temperatureC":46.27000728446589,"firePercent":61.72225855427162,"pressureBar":2,"flowRateLpm":0,"waterLevelPercent":97.43307679263265,"alertLevel":"NORMAL","controlMode":"AUTO","valveOpen":false}
+{"timestamp":"2026-04-12T12:30:46.255Z","temperatureC":41.43690795831636,"firePercent":63.4071335741944,"pressureBar":2,"flowRateLpm":0,"waterLevelPercent":96.46421315368734,"alertLevel":"NORMAL","controlMode":"AUTO","valveOpen":false}
+{"timestamp":"2026-04-12T12:31:46.439Z","temperatureC":34.41568759212634,"firePercent":55.99201257554268,"pressureBar":2,"flowRateLpm":0,"waterLevelPercent":93.89842525143504,"alertLevel":"NORMAL","controlMode":"AUTO","valveOpen":false}
+{"timestamp":"2026-04-12T12:32:46.503Z","temperatureC":34.612978093227625,"firePercent":71.92142154674397,"pressureBar":3.8476587157278725,"flowRateLpm":0,"waterLevelPercent":95.55713763742696,"alertLevel":"NORMAL","controlMode":"AUTO","valveOpen":false}

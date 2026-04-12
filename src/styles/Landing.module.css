@@ -1,0 +1,244 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 12% -10%, rgba(255, 92, 92, 0.3), transparent 58%),
+    radial-gradient(900px 500px at 92% -10%, rgba(123, 15, 15, 0.35), transparent 62%),
+    #101216;
+  padding: 26px;
+  color: #f5f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 26px;
+  padding: 18px 18px 24px;
+  background: linear-gradient(180deg, rgba(14, 17, 23, 0.92), rgba(12, 14, 18, 0.86));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 6px 14px;
+}
+
+.brandWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandMark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(145deg, #ca1f1f, #730e0e);
+}
+
+.brandTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.brandSub {
+  font-size: 11px;
+  color: #b6bac5;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+  color: #a5aab5;
+  font-size: 14px;
+}
+
+.navLinks a:hover {
+  color: #fff;
+}
+
+.navActions {
+  display: flex;
+  gap: 8px;
+}
+
+.signIn,
+.signUp {
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.signIn {
+  color: #eceef3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.signUp {
+  color: #fff;
+  background: linear-gradient(120deg, #d12626, #8f1111);
+}
+
+.hero {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 14px;
+}
+
+.heroLeft {
+  border-radius: 22px;
+  padding: 28px;
+  background: linear-gradient(150deg, rgba(111, 18, 18, 0.62), rgba(22, 24, 32, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.kicker {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #ffb6b6;
+}
+
+.heroLeft h1 {
+  margin-top: 12px;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.02;
+}
+
+.heroLeft p {
+  margin-top: 14px;
+  max-width: 680px;
+  color: #d2d8e5;
+  line-height: 1.6;
+}
+
+.ctaRow {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.primaryBtn,
+.ghostBtn {
+  padding: 12px 16px;
+  border-radius: 11px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.primaryBtn {
+  color: #fff;
+  background: linear-gradient(120deg, #d92f2f, #8c1111);
+}
+
+.ghostBtn {
+  color: #f2f3f7;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.heroCard {
+  border-radius: 22px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(170deg, rgba(20, 23, 30, 0.92), rgba(17, 20, 25, 0.9));
+}
+
+.heroCardTitle {
+  font-size: 14px;
+  color: #9ca4b6;
+}
+
+.heroMetrics {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.heroMetrics article {
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.heroMetrics span {
+  display: block;
+  color: #9ca4b6;
+  font-size: 12px;
+}
+
+.heroMetrics strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+.featureGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.featureCard {
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.featureCard h3 {
+  font-size: 16px;
+}
+
+.featureCard p {
+  color: #afb6c4;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.moduleStrip {
+  margin-top: 14px;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(120deg, rgba(148, 24, 24, 0.25), rgba(255, 255, 255, 0.03));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.moduleStrip a {
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 980px) {
+  .topNav {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
