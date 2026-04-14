@@ -38,9 +38,7 @@ export default function NavbarFrame({ title, active }: NavbarFrameProps) {
           role="button"
           tabIndex={0}
         >
-          <span className={styles.bell} aria-hidden>
-            !
-          </span>
+
           
           {user?.photoURL ? (
             <div className={styles.avatarWrap}>
