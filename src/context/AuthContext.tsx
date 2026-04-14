@@ -3,7 +3,7 @@ import { auth, onAuthStateChanged, logout, User } from '@/lib/firebaseConfig';
 import { useRouter } from 'next/router';
 
 // Pages that don't require authentication
-const PUBLIC_ROUTES = ['/auth/login', '/auth/register'];
+const PUBLIC_ROUTES = ['/auth/login', '/auth/register', '/'];
 
 interface AuthContextValue {
   user:         User | null;
