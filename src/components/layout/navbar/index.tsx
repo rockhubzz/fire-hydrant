@@ -7,7 +7,14 @@ import { useRouter } from 'next/router';
 
 interface NavbarFrameProps {
   title: string;
-  active: 'dashboard' | 'auto' | 'manual' | 'notif' | 'logs';
+  active:
+    | 'dashboard'
+    | 'auto'
+    | 'manual'
+    | 'notif'
+    | 'logs'
+    | 'admin'
+    | 'parameters';
 }
 
 export default function NavbarFrame({ title, active }: NavbarFrameProps) {
