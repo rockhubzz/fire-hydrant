@@ -82,9 +82,6 @@ export default function NavbarFrame({ title, active }: NavbarFrameProps) {
             <Link href="/profile" className={styles.dropdownItem}>
               Profile
             </Link>
-            <Link href="/settings" className={styles.dropdownItem}>
-              Settings
-            </Link>
             <div className={styles.dropdownDivider} />
             <button className={styles.dropdownItemDanger} onClick={handleSignOut}>
               Sign Out
