@@ -127,12 +127,11 @@ export default function HomePage() {
               <a href="#about">About</a>
             </nav>
 
+
             <div className={styles.navActions}>
-              <Link href="" className={styles.signIn}>
-                Sign In
-              </Link>
-              <Link href="" className={styles.signUp}>
-                Sign Up
+              <p>Belum punya akun?</p>
+              <Link href="/auth/register" className={styles.signUp}>
+                Daftar
               </Link>
             </div>
           </header>
@@ -150,11 +149,8 @@ export default function HomePage() {
                 dan baca log Hadoop dalam satu command center.
               </p>
               <div className={styles.ctaRow}>
-                <Link href="" className={styles.primaryBtn}>
-                  Masuk Akun
-                </Link>
-                <Link href="" className={styles.ghostBtn}>
-                  Buat Akun
+                <Link href="/auth/login" className={styles.primaryBtn}>
+                  Masuk
                 </Link>
               </div>
               <div className={styles.heroBadge}>Fire-Safe Operation</div>
