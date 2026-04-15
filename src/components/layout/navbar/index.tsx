@@ -52,7 +52,9 @@ export default function NavbarFrame({ title, active }: NavbarFrameProps) {
               />
             </div>
           ) : (
-            <div className={styles.avatar} />
+            <div className={styles.avatarInitials}>
+              {user?.displayName?.charAt(0).toUpperCase() || 'A'}
+            </div>
           )}
 
           <div>

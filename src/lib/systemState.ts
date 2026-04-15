@@ -1,5 +1,5 @@
 import { appendSensorLog } from '@/lib/hadoopClient';
-import { sendTelegramAlert } from '@/lib/telegram';
+// import { sendTelegramAlert } from '@/lib/telegram';
 import { AlertLevel, SystemState } from '@/types/system';
 
 const SENSOR_INTERVAL_MS = 5_000;
@@ -136,7 +136,7 @@ class HydrantSystem {
       return;
     }
 
-    await sendTelegramAlert(this.state.alertLevel, this.state.sensor);
+    // await sendTelegramAlert(this.state.alertLevel, this.state.sensor);
     this.lastNotifiedLevel = this.state.alertLevel;
   }
 
