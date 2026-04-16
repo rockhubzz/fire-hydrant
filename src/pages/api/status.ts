@@ -5,7 +5,7 @@ import { SensorLogEntry, SystemState } from '@/types/system';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
-    // Try to fetch latest log from Hadoop
+    // Prefer latest persisted state so status remains consistent across API workers.
     const logs = await readSensorLogs(1);
 
     if (logs && logs.length > 0) {
@@ -37,7 +37,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     console.warn('[Status API] Failed to read from Hadoop logs, falling back to system state:', error);
   }
 
-  // Fallback to system state if Hadoop read fails
+  // Fallback to in-memory state for local/dev scenarios.
   res.status(200).json({
     ok: true,
     data: hydrantSystem.getState(),
