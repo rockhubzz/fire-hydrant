@@ -328,13 +328,6 @@ function ParametersPage() {
               </button>
             </div>
           </div>
-
-
-          {parameters.updatedAt && (
-            <div className={styles['last-updated']}>
-              Terakhir diperbarui: {new Date(parameters.updatedAt).toLocaleString('id-ID')}
-            </div>
-          )}
       </DashboardFrame>
     </>
   );
