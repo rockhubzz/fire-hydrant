@@ -8,6 +8,10 @@ import { notifyTelegram } from '@/lib/telegramNotifier';
 let lastWaterLevelNotificationSentAt = 0;
 const WATER_LEVEL_COOLDOWN_MS = 15 * 60 * 1000; // 15 minutes
 
+// Cache for logs to reduce Hadoop reads
+let logsCache: { data: SensorLogEntry[]; timestamp: number } | null = null;
+const LOGS_CACHE_TTL_MS = 10_000; // 10 seconds cache TTL
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     return handleGet(req, res);
@@ -22,11 +26,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 async function handleGet(req: NextApiRequest, res: NextApiResponse) {
   const limit = Number(req.query.limit ?? '50');
 
+  // Check cache first
+  const now = Date.now();
+  if (logsCache && (now - logsCache.timestamp) < LOGS_CACHE_TTL_MS) {
+    const cachedData = logsCache.data.slice(0, limit);
+    return res.status(200).json({ ok: true, data: cachedData, cached: true });
+  }
+
   try {
     const logs = await readSensorLogs(Number.isFinite(limit) ? limit : 50);
-    return res.status(200).json({ ok: true, data: logs });
+    
+    // Update cache
+    logsCache = { data: logs, timestamp: now };
+    
+    return res.status(200).json({ ok: true, data: logs, cached: false });
   } catch (error) {
     console.error(error);
+    // Return stale cache if available
+    if (logsCache) {
+      const cachedData = logsCache.data.slice(0, limit);
+      return res.status(200).json({ ok: true, data: cachedData, cached: true, stale: true });
+    }
     return res.status(500).json({ ok: false, error: 'Gagal membaca log Hadoop' });
   }
 }

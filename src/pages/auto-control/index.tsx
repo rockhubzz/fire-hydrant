@@ -32,7 +32,7 @@ export default function AutoControlPage() {
   useEffect(() => {
     loadStatus();
     loadParameters();
-    const timer = setInterval(loadStatus, 2000);
+    const timer = setInterval(loadStatus, 10000);
     return () => clearInterval(timer);
   }, []);
 

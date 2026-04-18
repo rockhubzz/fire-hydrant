@@ -18,7 +18,7 @@ export default function ManualControlPage() {
 
   useEffect(() => {
     loadStatus();
-    const timer = setInterval(loadStatus, 2000);
+    const timer = setInterval(loadStatus, 10000);
     return () => clearInterval(timer);
   }, []);
 
