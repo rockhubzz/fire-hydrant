@@ -46,7 +46,7 @@ function DashboardPage() {
     };
 
     load();
-    const timer = setInterval(load, 2000);
+    const timer = setInterval(load, 10000);
     return () => clearInterval(timer);
   }, []);
 
