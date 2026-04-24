@@ -141,9 +141,9 @@ function ParametersPage() {
             <ul>
               <li><strong>Suhu:</strong> Warning dan Critical untuk pemicu alarm manual</li>
               <li><strong>Indikasi Api:</strong> Warning dan Critical untuk mendeteksi kemungkinan kebakaran</li>
-              <li><strong>Tekanan:</strong> Minimum untuk operasi sistem</li>
+              {/* <li><strong>Tekanan:</strong> Minimum untuk operasi sistem</li>
               <li><strong>Laju Aliran:</strong> Minimum untuk membuka katup</li>
-              <li><strong>Tingkat Air:</strong> Peringatan jika air menjadi rendah</li>
+              <li><strong>Tingkat Air:</strong> Peringatan jika air menjadi rendah</li> */}
             </ul>
           </div>
 
@@ -234,7 +234,7 @@ function ParametersPage() {
 
               {/* Pressure Threshold */}
               <div className={styles['form-group']}>
-                <label htmlFor="pressure">Ambang Batas Tekanan (bar)</label>
+                {/* <label htmlFor="pressure">Ambang Batas Tekanan (bar)</label>
                 <div className={styles['input-wrapper']}>
                   <input
                     id="pressure"
@@ -249,12 +249,12 @@ function ParametersPage() {
                   />
                   <span className={styles.unit}>bar</span>
                 </div>
-                <p className={styles.help}>Tekanan minimum yang diperlukan</p>
+                <p className={styles.help}>Tekanan minimum yang diperlukan</p> */}
               </div>
 
               {/* Flow Rate Threshold */}
               <div className={styles['form-group']}>
-                <label htmlFor="flowRate">Ambang Batas Laju Aliran (LPM)</label>
+                {/* <label htmlFor="flowRate">Ambang Batas Laju Aliran (LPM)</label>
                 <div className={styles['input-wrapper']}>
                   <input
                     id="flowRate"
@@ -268,14 +268,14 @@ function ParametersPage() {
                     className={styles.input}
                   />
                   <span className={styles.unit}>LPM</span>
-                </div>
-                <p className={styles.help}>Laju aliran air minimum (Liter per Menit)</p>
+                </div> */}
+                {/* <p className={styles.help}>Laju aliran air minimum (Liter per Menit)</p> */}
               </div>
 
               {/* Water Level Threshold */}
               <div className={styles['form-group']}>
-                <label htmlFor="waterLevel">Ambang Batas Tingkat Air (%)</label>
-                <div className={styles['input-wrapper']}>
+                {/* <label htmlFor="waterLevel">Ambang Batas Tingkat Air (%)</label> */}
+                {/* <div className={styles['input-wrapper']}>
                   <input
                     id="waterLevel"
                     type="number"
@@ -288,8 +288,8 @@ function ParametersPage() {
                     className={styles.input}
                   />
                   <span className={styles.unit}>%</span>
-                </div>
-                <p className={styles.help}>Tingkat air minimum dalam tangki</p>
+                </div> */}
+                {/* <p className={styles.help}>Tingkat air minimum dalam tangki</p> */}
               </div>
             </div>
 
