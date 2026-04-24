@@ -133,7 +133,17 @@ Ketika threshold terpenuhi, valve otomatis membuka untuk mitigasi kebakaran.`;
           </div>
 
           <aside className={styles.sidePanel}>
-            <MetricBox label="Water Level" value={`${state?.sensor.waterLevelPercent.toFixed(0) ?? '-'}%`} sub="Tank reserve" />
+            <MetricBox 
+              label="Water Level" 
+              value={
+                !state 
+                  ? "-"
+                  : state.sensor.waterLevelPercent > 0 
+                    ? "Terisi" 
+                    : "Habis"
+              } 
+              sub="Tank reserve" 
+            />
             {/* <MetricBox label="Flow Rate" value={`${state?.sensor.flowRateLpm.toFixed(0) ?? '-'} L/min`} sub="Valve throughput" /> */}
             <div className={styles.insightCard}>
               <p className={styles.insightTitle}>Incident Insight</p>
